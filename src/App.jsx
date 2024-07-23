@@ -12,8 +12,6 @@ export default function App() {
         () => JSON.parse(localStorage.getItem("best")) || 0
     )
     
-    console.log(tenzies)
-
     React.useEffect(() => {
         const allHeld = dice.every(die => die.isHeld)
         const allSameValue = dice.every(die => die.value === dice[0].value)
