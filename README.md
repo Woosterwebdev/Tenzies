@@ -1,7 +1,7 @@
 https://tenzies-351329.netlify.app/
 
 
-# I have added the folloing features
+# I have added the following features
 
     -roll counter
     -best score
