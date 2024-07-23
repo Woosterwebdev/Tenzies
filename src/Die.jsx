@@ -6,7 +6,7 @@ export default function Die(props) {
     }
     return (
         <div className="die-face" style={styles} onClick={props.holdDice}>
-            <img className="die-num" src={`/assets/${props.value}.png`} />
+            <img className="die-num" src={`../public/${props.value}.png`} />
         </div>
     )
 }

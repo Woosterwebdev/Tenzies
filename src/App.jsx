@@ -12,6 +12,8 @@ export default function App() {
         () => JSON.parse(localStorage.getItem("best")) || 0
     )
     
+    console.log(tenzies)
+
     React.useEffect(() => {
         const allHeld = dice.every(die => die.isHeld)
         const allSameValue = dice.every(die => die.value === dice[0].value)
@@ -44,12 +46,12 @@ export default function App() {
         
     function rollDice() {
         if (!tenzies) {
-        setRoll(prevRoll => prevRoll + 1)
-        setDice(oldDice => oldDice.map(die => {
-            return die.isHeld ? 
+            setDice(oldDice => oldDice.map(die => {
+                return die.isHeld ? 
                 die :
                 generateNewDie()
-        }))
+            }))
+            setRoll(prevRoll => prevRoll + 1)
         } else {
             setTenzies(false)
             if (roll < best || best == 0) {
